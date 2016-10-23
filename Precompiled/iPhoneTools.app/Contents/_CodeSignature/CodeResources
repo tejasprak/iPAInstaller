@@ -10,23 +10,23 @@
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		dvJg34tOvbgFsOq90LBMysdv/8U=
+		UHmxEfQ2AfjAMgq32jv3F753qQ0=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib</key>
 		<data>
-		WNQzw8dak2QHE2Gcc536Cgu8szQ=
+		ohq2ielFep+Pwuw7xGiLQKoLl+0=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib</key>
 		<data>
-		k1vDjhm2pJ2DKXJw/9XJZwr2YAA=
+		4uuQgtVFF5McguPOKKM33IEj8dU=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
 		<data>
-		aZM5eTeEGUwEuwiN8DQdjL4sn50=
+		PhztgfWj6dKlN5x/ZDoMWpQ1dvM=
 		</data>
 		<key>Resources/ideviceinstaller</key>
 		<data>
-		TexFQKgulgRJEMzBs3sXGulVCXs=
+		1YiREc3n3ZWN2j1tXAQL62wZoqc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -141,6 +141,10 @@
 		</dict>
 		<key>Resources/AppIcon.icns</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			9CG3Lp+XNzBQz+9X7PZ8YOh6SUc=
+			</data>
 			<key>hash2</key>
 			<data>
 			aXe4yqbKKHwXzj8/8PLMHdCc9hL0+lI7NzDlR4o684U=
@@ -148,37 +152,57 @@
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			UHmxEfQ2AfjAMgq32jv3F753qQ0=
+			</data>
 			<key>hash2</key>
 			<data>
-			ACGwM86LoeqxUJJwD+B38uRYX5Wy6Krle+S4x4iQdn4=
+			fvJcP5jR5NyZEzlQCn7CAQE7KLi3OMaH9uYsn3U98YA=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			ohq2ielFep+Pwuw7xGiLQKoLl+0=
+			</data>
 			<key>hash2</key>
 			<data>
-			dPw9cy3ctecKIdCbVyi8RXe6mkrQgZZ0CXXBp8bWN/I=
+			hyZGSwrOb3vWA1XPFh2eZ8RuhN5sjCuN4LhYrxuhscI=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			4uuQgtVFF5McguPOKKM33IEj8dU=
+			</data>
 			<key>hash2</key>
 			<data>
-			J9UlfYPHfHk44I3gmlc6ppbWgt7JKwnpkfa7CSDPfm4=
+			4a9dE4dF3mklRsdYgIFp1hd8fKH+zq0cdOBT6VcXFkk=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			PhztgfWj6dKlN5x/ZDoMWpQ1dvM=
+			</data>
 			<key>hash2</key>
 			<data>
-			//Fqr9x7KBZHYX9eX+bw39ouzkCs80SFVOg2eoKuPuw=
+			TM1bP6wJcHW01Kj5KdrGnxHsoORS1f/wUGqqI8U6laM=
 			</data>
 		</dict>
 		<key>Resources/ideviceinstaller</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			1YiREc3n3ZWN2j1tXAQL62wZoqc=
+			</data>
 			<key>hash2</key>
 			<data>
-			JCiRxwxgZRQ+zVrAikOhzE8PXe7vdAzi3QxyurmW9cU=
+			Gr2ggPouftkJoALB8AvRgnJscgusYT8KAL8BcbZYda8=
 			</data>
 		</dict>
 	</dict>
