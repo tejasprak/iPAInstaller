@@ -686,7 +686,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S0J-Fw-SXD">
-                                <rect key="frame" x="187" y="142" width="100" height="32"/>
+                                <rect key="frame" x="190" y="91" width="100" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Install IPA" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="shC-HW-X27">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -697,7 +697,7 @@
                                 </connections>
                             </button>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UUR-Q7-J51">
-                                <rect key="frame" x="88" y="178" width="305" height="72"/>
+                                <rect key="frame" x="88" y="127" width="305" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="Drag and Drop IPA into this box" drawsBackground="YES" id="hPP-Ay-xwW">
                                     <font key="font" metaFont="system"/>
@@ -706,7 +706,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Zi-ns-K5K">
-                                <rect key="frame" x="18" y="113" width="451" height="22"/>
+                                <rect key="frame" x="24" y="54" width="451" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="THIS TOOL WILL NOT FUNCTION UNLESS YOU TYPE IN THIS COMMAND" id="0Xq-GG-5TW">
                                     <font key="font" metaFont="system"/>
@@ -715,7 +715,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ayD-53-iMh">
-                                <rect key="frame" x="18" y="84" width="446" height="34"/>
+                                <rect key="frame" x="26" y="23" width="446" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="BNW-ip-jmv">
                                     <font key="font" metaFont="system"/>
@@ -726,7 +726,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GSr-n1-FIo">
-                                <rect key="frame" x="171" y="13" width="132" height="32"/>
+                                <rect key="frame" x="171" y="5" width="132" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Install Libraries" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JKF-WT-9cM">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -736,9 +736,19 @@
                                     <action selector="librariesPressed:" target="XfG-lQ-9wD" id="At2-pa-cfg"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TEc-zG-tZa">
+                                <rect key="frame" x="182" y="233" width="136" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="2lH-1w-KuE">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="connected" destination="TEc-zG-tZa" id="L3M-0c-Bev"/>
                         <outlet property="otaText" destination="UUR-Q7-J51" id="b1n-Po-Ljd"/>
                     </connections>
                 </viewController>

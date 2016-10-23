@@ -16,7 +16,6 @@
 
 /* Begin PBXFileReference section */
 		960416F51DBC072E00F2FE5E /* ideviceinstaller */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ideviceinstaller; sourceTree = "<group>"; };
-		9604174E1DBC398200F2FE5E /* Phantom.ipa */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phantom.ipa; sourceTree = "<group>"; };
 		96B54EC61DBB032E00184077 /* iPhoneTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhoneTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B54EC91DBB032E00184077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96B54ECB1DBB032E00184077 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +54,6 @@
 		96B54EC81DBB032E00184077 /* iPhoneTools */ = {
 			isa = PBXGroup;
 			children = (
-				9604174E1DBC398200F2FE5E /* Phantom.ipa */,
 				960416F51DBC072E00F2FE5E /* ideviceinstaller */,
 				96B54EC91DBB032E00184077 /* AppDelegate.swift */,
 				96B54ECB1DBB032E00184077 /* ViewController.swift */,

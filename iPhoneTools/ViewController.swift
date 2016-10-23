@@ -7,9 +7,35 @@
 //
 
 import Cocoa
-
 class ViewController: NSViewController {
-
+    
+    func dialogOKCancel(question: String, text: String) -> Bool {
+        let myPopup: NSAlert = NSAlert()
+        myPopup.messageText = question
+        myPopup.informativeText = text
+        myPopup.alertStyle = NSAlertStyle.warning
+        myPopup.addButton(withTitle: "Yes")
+        myPopup.addButton(withTitle: "No")
+        return myPopup.runModal() == NSAlertFirstButtonReturn
+    }
+    func dialogYesCancel(question: String, text: String) -> Bool {
+        let myPopup: NSAlert = NSAlert()
+        myPopup.messageText = question
+        myPopup.informativeText = text
+        myPopup.alertStyle = NSAlertStyle.warning
+        myPopup.addButton(withTitle: "I will")
+        myPopup.addButton(withTitle: "I won't")
+        return myPopup.runModal() == NSAlertFirstButtonReturn
+    }
+    func dialogOk(question: String, text: String) -> Bool {
+        let myPopup: NSAlert = NSAlert()
+        myPopup.messageText = question
+        myPopup.informativeText = text
+        myPopup.alertStyle = NSAlertStyle.warning
+        myPopup.addButton(withTitle: "OK")
+        
+        return myPopup.runModal() == NSAlertFirstButtonReturn
+    }
     func executeCommand(command: String, args: [String]) -> String {
         
         let task = Process()
@@ -27,22 +53,7 @@ class ViewController: NSViewController {
         return output
         
     }
-    func shell(launchPath: String, arguments: [String] = []) -> NSString? {
-        
-        let task = Process()
-        task.launchPath = launchPath
-        task.arguments = arguments
-        
-        let pipe = Pipe()
-        task.standardOutput = pipe
-        task.launch()
-        
-        let data = pipe.fileHandleForReading.readDataToEndOfFile()
-        let output = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
-        
-        return output
-    }
-    func getEnvironmentVar(_ name: String) -> String? {
+       func getEnvironmentVar(_ name: String) -> String? {
         guard let rawValue = getenv(name) else { return nil }
         return String(utf8String: rawValue)
     }
@@ -65,12 +76,15 @@ class ViewController: NSViewController {
         return output
         
     }
+    @IBOutlet weak var connected: NSTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         NSLog("Fixing lockdownd...")
         var lol = "-R 777 /var/db/lockdown"
-        let commandOutput = executeCommand(command: "/usr/bin/sudo", args: ["chmod\(lol)"])
-        NSLog("Command output: \(commandOutput)")
+        let answer = dialogYesCancel(question: "Please install libraries if you haven't already", text: "Also make sure to enter the command at the bottom of the screen!.")
+      
+        //let commandOutput = executeCommand(command: "", args: ["chmod\(lol)"])
+        //NSLog("Command output: \(commandOutput)")
         let fileManager = FileManager.default
         
         // Get current directory path
@@ -78,6 +92,22 @@ class ViewController: NSViewController {
         let path = fileManager.currentDirectoryPath
         NSLog("\(path)/iPhoneTools.app/Contents/Resources/ideviceinstaller")
         
+        var one  = "|"
+        var two = "grep"
+        var three = "-i"
+        var four = "DeviceName"
+        var five = "lol.txt"
+        var six = ">"
+        
+        let commandOutput = executeCommand(command: "/bin/sh", args: ["-c", "/usr/local/bin/ideviceinfo | grep -i DeviceName"])
+        NSLog("Command output: \(commandOutput)")
+        if commandOutput == "" {
+            connected.stringValue = "No device connected"
+        } else {
+       connected.stringValue = commandOutput + "connected"
+        }
+        
+       // print(output!)
         // Do any additional setup after loading the view.
     }
     
@@ -87,9 +117,15 @@ class ViewController: NSViewController {
     @IBOutlet weak var otaText: NSTextField!
 
     @IBAction func librariesPressed(_ sender: NSButton) {
-        var ll = "/usr/local/bin"
-        let commandOutput = executeCommand(command: "/bin/cp", args: ["ideviceinstaller\(ll)"])
-        NSLog(commandOutput)
+        let answer = dialogOKCancel(question: "Do you have Homebrew installed?", text: "Choose your answer.")
+        if answer == true {
+            var mb = "install"
+            var lib = "libimobiledevice"
+            let commandOutput = executeCommand(command: "/usr/local/bin/brew", args: [mb, lib])
+            NSLog(commandOutput)
+        } else {
+            let answer = dialogOk(question: "Don't have Homebrew installed?", text: "Install it by going to brew.sh and following instructions.")
+        }
     }
     
     @IBAction func buttonPressed(_ sender: NSButton) {
